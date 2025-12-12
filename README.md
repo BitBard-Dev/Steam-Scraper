@@ -18,4 +18,4 @@
 - [ ] Progam automatically conducts data analysis
 - [ ] Improve UI/UX
   - [ ] Graphs & charts
-  - [ ]"Sexy" (non-placeholder) buttons
+  - [ ] "Sexy" (non-placeholder) buttons
