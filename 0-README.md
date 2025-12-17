@@ -4,14 +4,15 @@
 - Due to my lack of Python skills, steps of the project are divided across multiple files, requiring a lot of manual oversight. This is not ideal.
 
 #### Steps
-- [ ] Upload original code
-- [ ] Consolidate steps into a single repo
-  - [ ] Pull all GAME appids
-    - [ ] Ensure no duplicates
-  - [ ] Pull data on each GAME appid
-  - [ ] Incorporate STEAMSPY data??? (Original project did this. Ensure the gathered data is worthwhile.)
-- [ ] Ensure functionality of each function
-- [ ] Develop program UI
+- [x] Upload original code
+- [x] Refactor hulking code spaghetti into helper progams to main.py
+  - [ ] API interfaces (Steam & SteamSpy)
+  - [ ] Database (MongoDB & SQLite)
+  - [ ] Cleaning (general & language)
+  - [ ] Analysis (Matplotlib)
+  - [ ] Streamlit (Analysis usign Streamlit w/ interface)
+- [ ] Ensure functionality of each helper program
+- [ ] Develop program UI (Not necessary using Streamlit???)
 - [ ] Ensure functionality of compiled program
 #### Features/Improvements
 - [ ] Program has persistent memory of appids, reducing API query time (72hrs is __way__ too long)
