@@ -7,6 +7,9 @@
 - [x] Upload original code
 - [x] Refactor hulking code spaghetti into helper progams to main.py
   - [ ] API interfaces (Steam & SteamSpy)
+    - [ ] Improve Exception Handling: Wrap all requests.get(), .read_json(), etc. in try/except with fallback logging
+    - [ ] Incorporate logging instead of print()
+    - [ ] Progress Bar	Use tqdm for batch scraping
   - [ ] Database (MongoDB & SQLite)
   - [ ] Cleaning (general & language)
   - [ ] Analysis (Matplotlib)
@@ -15,6 +18,7 @@
 - [ ] Develop program UI (Not necessary using Streamlit???)
 - [ ] Ensure functionality of compiled program
 #### Features/Improvements
+
 - [ ] Program has persistent memory of appids, reducing API query time (72hrs is __way__ too long)
 - [ ] Progam automatically conducts data analysis
 - [ ] Improve UI/UX
