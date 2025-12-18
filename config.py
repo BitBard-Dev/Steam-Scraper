@@ -6,6 +6,7 @@ APP_DETAILS_URL = "https://store.steampowered.com/api/appdetails?appids={}"
 STEAMSPY_API_URL = "https://steamspy.com/api.php?request=appdetails&appid={}"
 
 # Headers for Steam API requests
+# Is this portion necessary? Needs extra testing??? Affects steam_api.py as well.
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
