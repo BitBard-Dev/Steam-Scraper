@@ -1,26 +1,34 @@
 # main.py
 
 from api.steam_api import fetch_app_list
-from utils.data_cleaning import remove_duplicates
-from db.mongo_handler import delete_duplicates
-from db.sqlite_handler import connect_sqlite, create_overall_info_table, insert_overall_info
+from cleaning.data_cleaning import remove_duplicates
+from database.mongo_handler import delete_duplicates
+from database.sqlite_handler import connect_sqlite, create_overall_info_table, insert_overall_info
 from config import JSON_CLEANED
 
 import json
 
 def run_all():
-    print("📥 Step 1: Fetch app list from Steam...")
+    print("Step 1: Fetch app list from Steam...")
     fetch_app_list()
 
-    print("🧹 Step 2: Remove duplicate appids...")
+    print("Step 2: Remove duplicate appids...")
     remove_duplicates()
 
-    print("🧼 Step 3: Clean up MongoDB duplicates (if any)...")
+    """print("Step 2.5: Query SteamDetails API)
+    fetch_app_details()
+    
+    """
+
+    print("Step 3: Clean up any MongoDB duplicates...")
     delete_duplicates()
 
-    print("📦 Step 4: Import JSON to SQLite...")
+    print("Step 4: Import JSON to SQLite...")
     with open(JSON_CLEANED, "r", encoding="utf-8") as f:
         games = json.load(f)
+    
+    """print("Step 5: )
+    """
 
     conn = connect_sqlite()
     cur = conn.cursor()
